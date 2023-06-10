@@ -1,0 +1,7 @@
+{
+    "name": "elektafoundation/form",
+    "type": "project",
+    "require": {
+        "sendgrid/sendgrid": "~7"
+    }
+}

@@ -1,0 +1,60 @@
+---
+title: "Donate"
+date: 2022-01-12T10:45:13Z
+draft: false
+---
+
+{{<heroBanner image="/img/banner-contact-us.jpg" page="internal">}}
+<h1>Donate</h1>
+{{</heroBanner>}}
+
+<div class="bg-off-white content-block py-5">
+
+	<div class="container">
+
+		<div class="row mb-4">
+
+			<div class="col col-12">
+
+				<p>A full donation function is coming soon. In the mean time, if you would like to contribute towards the cost of our programmes please fill in the form below and we will contact you.</p>
+
+				<form id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name*" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-address" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email*" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" class="sr-only">Telephone</label>
+                        <input type="text" id="telephone" name="telephone" placeholder="Telephone*" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organisation" class="sr-only">Organisation</label>
+                        <input type="text" id="organisation" name="organisation" placeholder="Organisation" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Message*</label>
+                        <textarea rows="5" id="message" name="message" placeholder="Message*" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+
+
+                <div id="contact-success" style="display:none">
+                    <p>Thank you for your enquiry</p>
+                </div>
+                <div id="contact-error" style="display:none">
+                    <p>There was a problem sending your enquiry</p>
+                </div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

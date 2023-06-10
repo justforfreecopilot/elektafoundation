@@ -1,0 +1,11 @@
+- id: translations
+  translation: available translations
+
+- id: from
+  translation: from
+
+- id: until
+  translation: until
+
+- id: figure
+  translation: figure

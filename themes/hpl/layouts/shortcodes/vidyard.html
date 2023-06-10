@@ -1,0 +1,12 @@
+{{- $type := .Get "type" -}}
+{{- if (.Get "thumbnail") -}}
+<a href="#" class="vidyard-trigger" data-video="{{ .Get "id" }}"><img src="{{ .Get "thumbnail" }}" alt="{{ .Get "alt" }}" /><span></span></a>
+<div class="d-none">
+{{- end -}}
+<img class="vidyard-player-embed" 
+    src="https://play.vidyard.com/{{.Get "id"}}.jpg" 
+    data-uuid="{{.Get "id"}}" data-v="4" 
+    data-type="{{ if or (eq $type "lightbox") (eq $type "button") (.Get "thumbnail" )}}lightbox{{ else }}inline{{ end }}" />
+{{- if (.Get "thumbnail") -}}
+</div>
+{{- end -}}

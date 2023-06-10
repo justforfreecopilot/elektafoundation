@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+### Redirect to www 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^elektafoundation.com$
+RewriteRule (.*) https://www.elektafoundation.com/$1 [R=301,L]
+
+### Redirect to https
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

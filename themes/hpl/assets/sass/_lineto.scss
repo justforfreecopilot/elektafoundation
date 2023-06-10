@@ -1,0 +1,50 @@
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * elekta.com
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2019
+ */
+
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The fonts folder(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+@font-face {
+  font-family: "ElektaBrownWeb";
+  src: url("../fonts/ElektaBrownWeb-Bold.eot");
+  src: url("../fonts/ElektaBrownWeb-Bold.woff") format("woff"),
+    url("../fonts/ElektaBrownWeb-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ElektaBrownWeb";
+  src: url("../fonts/ElektaBrownWeb-Light.eot");
+  src: url("../fonts/ElektaBrownWeb-Light.woff") format("woff"),
+    url("../fonts/ElektaBrownWeb-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ElektaBrownWeb";
+  src: url("../fonts/ElektaBrownWeb-Regular.eot");
+  src: url("../fonts/ElektaBrownWeb-Regular.woff") format("woff"),
+    url("../fonts/ElektaBrownWeb-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}

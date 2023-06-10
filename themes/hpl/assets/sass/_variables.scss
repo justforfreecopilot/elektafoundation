@@ -1,0 +1,56 @@
+/* Elekta colors */
+$color-teal: #006580;
+$color-sky: #75c4d7;
+$color-vivid-blue: #00bed5;
+$color-mist: #e7f3f6;
+$color-dark-grey: #63666a;
+$color-light-grey: #c8c9c8;
+$color-charcoal: #4a4a4a;
+$color-deep-red: #c31a2f;
+$color-orange: #e75301;
+$color-rich-pink: #a20067;
+$color-purple: #3700a8;
+$color-green: #4c8c2b;
+
+$enable-responsive-font-sizes: true;
+
+/* Define where the colors are used */
+$primary: $color-teal;
+$secondary: #666666;
+$warning: $color-orange;
+
+$text-color: $color-charcoal;
+$link-color: darken($color-vivid-blue, 14%);
+$link-hover-color: $color-vivid-blue;
+
+$body-bg: #eeeeee;
+
+$body-color: $color-charcoal;
+
+$font-size-base: 1.1rem;
+$font-weight-normal: 300;
+
+// $border-radius: 0;
+
+$font-family-sans-serif: "ElektaBrownWeb", Verdana, Geneva, Arial, Helvetica, sans-serif;
+$font-family-serif: "Zilla Slab", Georgia, "Times New Roman", Times, serif;
+
+$headings-font-weight: 300;
+
+$input-bg: #eee;
+$input-border-radius: .6rem;
+
+$btn-font-weight: 400;
+
+// Britweb variables
+
+$primary:#3a8f66;
+$navbar-dark-color:#fff;
+$font-family-base:'Poppins', sans-serif;
+$font-size-base:1.125rem;
+$font-weight-base:400;
+$body-color:#333;
+$body-bg:#fff;
+$lead-font-size:1.5rem;
+$lead-font-weight:600;
+$modal-md:800px;

@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="mainNavBar">
+  <!--<a class="navbar-brand" href="#">Navbar</a>-->
+  <a href="/"><img src="/img/logo-elekta-foundation.png" alt="Elekta Foundation" width="235" height="64" class="my-3"></a>
+  <!--<div class="social-icons">
+    <p>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </p>
+  </div>-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNavbarContent">
+    <ul class="navbar-nav w-100">
+    	{{ range .Site.Menus.mainmenu }}
+  			<li class="nav-item{{ if .HasChildren }} dropdown{{ end }}">
+          <a class="nav-link{{ if .HasChildren }} dropdown-toggle{{ end }}" href="{{ .URL }}"{{ if .HasChildren }} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{ end }}>{{ .Name }}</a>
+          {{ if .HasChildren }}
+  		      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+  		        {{ range .Children }}
+                <li class="nav-item{{ if.HasChildren }} dropright{{ end }}">
+                  <a class="dropdown-item {{ if .HasChildren }} dropdown-toggle{{ end }}" href="{{ .URL }}" {{ if .HasChildren }} id="navbarDropdown-{{ anchorize .Name }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-flip="true"{{ end }}>{{ .Name }}</a>
+                  {{ if .HasChildren }}
+                    <ul class="submenu dropdown-menu" aria-labelledby="navbarDropdown-{{ anchorize .Name }}">
+                      {{ range .Children }}
+                        <li><a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a></li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </li>
+  	          {{ end }}
+  	        </ul>
+          {{ end }}
+        </li>
+	    {{ end }}
+      <li class="ml-md-auto"><a href="/donate/" class="btn btn-primary">Donate</a></li>
+    </ul>
+  </div>
+</nav>

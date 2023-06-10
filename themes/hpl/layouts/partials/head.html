@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }} – {{ .Title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <link rel="icon" href="/favicon.ico" />
+    {{- $mainDevOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "resources/sass")) -}}
+    {{- $mainLiveOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "includePaths" (slice "resources/sass")) -}}
+    {{- $mainStyle := "" -}}
+    {{- if .Site.IsServer -}}
+        {{- $mainStyle = resources.Get "sass/main.scss" | resources.ToCSS $mainDevOptions -}}
+    {{- else -}}
+        {{- $mainStyle = resources.Get "sass/main.scss" | resources.ToCSS $mainLiveOptions -}}
+    {{- end -}}
+    {{- $finalStyle := $mainStyle | resources.Fingerprint "sha384" -}}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    <link rel="stylesheet" href="{{ $finalStyle.RelPermalink }}" crossorigin="anonymous">
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+        {{ end }}
+    {{ end }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+</head>

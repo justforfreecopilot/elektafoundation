@@ -1,0 +1,7 @@
+node_modules
+/resources
+/public
+LICENSE
+.idea
+.DS_Store
+.vscode

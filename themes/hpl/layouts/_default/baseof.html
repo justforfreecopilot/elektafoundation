@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}" class="h-100">
+{{- partial "head.html" . -}}
+
+<body class="d-flex flex-column h-100">
+    {{- partial "header.html" . -}}
+    <!--{{- partial "modal-country.html" . -}}-->
+
+    <!--<div class="container mt-5">
+        {{- block "main" . }}
+        <main role="main" class="flex-shrink-0">-->
+            {{ .Content }}
+        <!--</main>
+        {{- end }}
+    </div>-->
+
+    {{- partial "footer.html" . -}}
+    {{- partial "footer-scripts.html" . -}}
+</body>
+
+</html>

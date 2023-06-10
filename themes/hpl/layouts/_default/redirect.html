@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="1; url={{ .Site.BaseURL }}{{ .Params.redirect }}" />
+        <title>{{ .Site.Title }} – {{ .Title }}</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+        <link rel="icon" href="/favicon.ico" />
+        {{ $mainDevOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "resources/sass")) }}
+        {{ $mainLiveOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "includePaths" (slice "resources/sass")) }}
+        {{ $mainStyle := "" }}
+        {{ if .Site.IsServer }}
+        {{ $mainStyle = resources.Get "sass/main.scss" | resources.ToCSS $mainDevOptions }}
+        {{ else }}
+        {{ $mainStyle = resources.Get "sass/main.scss" | resources.ToCSS $mainLiveOptions }}
+        {{ end }}
+    
+        <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
+    </head>
+    <body class="d-flex flex-column h-100">
+        {{- partial "header.html" . -}}
+        <main class="main flex-shrink-0">
+            <div class="container text-center mt-5">
+                <p class="h1">Redirecting ...</p>
+            </div>
+        </main>
+        <script type="text/javascript">
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="https://stats.elekta.com/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '11']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+    </body>
+</html>
