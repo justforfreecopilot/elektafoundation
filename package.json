@@ -1,29 +1,22 @@
 {
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/BritWeb-Ltd/elekta-foundation/issues"
-  },
-  "comments": {
-    "dependencies": {
-      "dayjs": "project"
-    },
-    "devDependencies": {}
-  },
-  "dependencies": {
-    "dayjs": "^1.10.7"
-  },
-  "description": "Elekta Foundation",
-  "devDependencies": {},
-  "homepage": "https://github.com/BritWeb-Ltd/elekta-foundation#readme",
-  "license": "ISC",
-  "main": "index.js",
   "name": "elekta-foundation",
+  "version": "1.0.0",
+  "description": "Elekta Foundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BritWeb-Ltd/elekta-foundation.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BritWeb-Ltd/elekta-foundation/issues"
   },
-  "version": "1.0.0"
+  "homepage": "https://github.com/BritWeb-Ltd/elekta-foundation#readme",
+  "dependencies": {
+    "dayjs": "^1.11.4"
+  }
 }

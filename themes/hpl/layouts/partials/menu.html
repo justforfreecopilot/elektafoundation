@@ -16,12 +16,12 @@
     <ul class="navbar-nav w-100">
     	{{ range .Site.Menus.mainmenu }}
   			<li class="nav-item{{ if .HasChildren }} dropdown{{ end }}">
-          <a class="nav-link{{ if .HasChildren }} dropdown-toggle{{ end }}" href="{{ .URL }}"{{ if .HasChildren }} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{ end }}>{{ .Name }}</a>
+          <a class="nav-link{{ if .HasChildren }} dropdown-toggle{{ end }}"{{ if not .HasChildren }} href="{{ .URL }}"{{ end }}{{ if .HasChildren }} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{ end }}>{{ .Name }}</a>
           {{ if .HasChildren }}
   		      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
   		        {{ range .Children }}
                 <li class="nav-item{{ if.HasChildren }} dropright{{ end }}">
-                  <a class="dropdown-item {{ if .HasChildren }} dropdown-toggle{{ end }}" href="{{ .URL }}" {{ if .HasChildren }} id="navbarDropdown-{{ anchorize .Name }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-flip="true"{{ end }}>{{ .Name }}</a>
+                  <a class="dropdown-item {{ if .HasChildren }} dropdown-toggle{{ end }}" href="{{ .URL }}"{{ if .HasChildren }} id="navbarDropdown-{{ anchorize .Name }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-flip="true"{{ end }}>{{ .Name }}</a>
                   {{ if .HasChildren }}
                     <ul class="submenu dropdown-menu" aria-labelledby="navbarDropdown-{{ anchorize .Name }}">
                       {{ range .Children }}

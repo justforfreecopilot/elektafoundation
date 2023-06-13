@@ -4,22 +4,10 @@ title = "Elekta Foundation"
 theme = "hpl"
 [menu]
   [[menu.mainmenu]]
-    identifier = "about-us"
-    name = "About Us"
-    url = "/about-us/"
+    identifier = "cancer-facts"
+    name = "Cancer Facts"
+    url = "/cancer-facts/"
     weight = 1
-  [[menu.mainmenu]]
-    identifier = "our-team"
-    name = "Our Team"
-    url = "/about-us/our-team/"
-    parent = "about-us"
-    weight = 1
-  [[menu.mainmenu]]
-    identifier = "our-partners"
-    name = "Our Partners"
-    url = "/about-us/our-partners/"
-    parent = "about-us"
-    weight = 2
   [[menu.mainmenu]]
     identifier = "our-mission"
     name = "Our Mission"
@@ -31,10 +19,50 @@ theme = "hpl"
     url = "/our-work/"
     weight = 3
   [[menu.mainmenu]]
+    identifier = "initial-focus"
+    name = "Initial Focus"
+    url = "/our-work/initial-focus/"
+    parent = "our-work"
+    weight = 1
+  [[menu.mainmenu]]
+    identifier = "ongoing-projects"
+    name = "Ongoing Projects"
+    url = "/our-work/ongoing-projects/"
+    parent = "our-work"
+    weight = 2
+  [[menu.mainmenu]]
+    identifier = "education"
+    name = "Education"
+    url = "/education/"
+    weight = 4
+  [[menu.mainmenu]]
+    identifier = "about-us"
+    name = "About Us"
+    url = "/about-us/"
+    weight = 5
+  [[menu.mainmenu]]
+    identifier = "creation"
+    name = "Creation"
+    url = "/about-us/creation/"
+    parent = "about-us"
+    weight = 1
+  [[menu.mainmenu]]
+    identifier = "our-team"
+    name = "Our Team"
+    url = "/about-us/our-team/"
+    parent = "about-us"
+    weight = 2
+  [[menu.mainmenu]]
+    identifier = "our-partners"
+    name = "Our Partners"
+    url = "/about-us/our-partners/"
+    parent = "about-us"
+    weight = 3
+  [[menu.mainmenu]]
     identifier = "contact-us"
     name = "Contact Us"
     url = "/contact-us/"
-    weight = 4
+    weight = 6
 
 # [server]
 # [[server.headers]]
