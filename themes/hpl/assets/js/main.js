@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://prod.gimbou.com',
+            url: 'https://prod.gimbou.com/index.php',
             data: JSON.stringify(formData),
             success: (data)=>{
                 $('#contact-form').hide();
