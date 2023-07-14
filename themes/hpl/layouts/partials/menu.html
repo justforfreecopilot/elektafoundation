@@ -13,7 +13,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="mainNavbarContent">
-    <ul class="navbar-nav w-100">
+    <ul class="navbar-nav w-100 text-center">
     	{{ range .Site.Menus.mainmenu }}
   			<li class="nav-item{{ if .HasChildren }} dropdown{{ end }}">
           <a class="nav-link{{ if .HasChildren }} dropdown-toggle{{ end }}"{{ if not .HasChildren }} href="{{ .URL }}"{{ end }}{{ if .HasChildren }} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{ end }}>{{ .Name }}</a>

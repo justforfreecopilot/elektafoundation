@@ -59,10 +59,15 @@ theme = "hpl"
     parent = "about-us"
     weight = 3
   [[menu.mainmenu]]
+    identifier = "events"
+    name = "Events"
+    url = "/events/"
+    weight = 6
+  [[menu.mainmenu]]
     identifier = "contact-us"
     name = "Contact Us"
     url = "/contact-us/"
-    weight = 6
+    weight = 7
 
 # [server]
 # [[server.headers]]
